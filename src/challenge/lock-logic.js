@@ -7,8 +7,6 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
-const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-
 function changeDialValue (index, incrementBy) {
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
@@ -30,7 +28,7 @@ function changeDialValue (index, incrementBy) {
   lockState.wheels[index] += incrementBy
 
   if (JSON.stringify(SECRET_COMBO) === JSON.stringify(lockState.wheels)) {
-    lockState.locked = false;
+    lockState.locked = false
     redirect('gautam-gadipudi')
   }
 }
