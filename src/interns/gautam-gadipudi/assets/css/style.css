@@ -1,0 +1,98 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+.profile-image-container {
+    grid-area: profile-image-container;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.profile-image {
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    border: 5px yellow solid;
+}
+
+.greeting {
+    grid-area: greeting;
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    text-align: center;
+    color: yellow;
+}
+
+.greeting-text {
+    margin: 0;
+}
+
+.name {
+    margin: 0;
+}
+
+.about {
+    grid-area: about;
+    color: white;
+    border: solid 1px yellow;
+    border-radius: 10px;
+    padding: 5px 15px;
+    text-align: justify;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading {
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+        'profile-image-container'
+        'greeting'
+        'about';
+}
+
+.main {
+    margin-top: 15px;
+    grid-area: main;
+    border: solid 1px yellow;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: right;
+    font-size: 10px;
+}
+
+.content {
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+            'profile-image-container greeting greeting'
+            'about about about';
+    }
+  }
